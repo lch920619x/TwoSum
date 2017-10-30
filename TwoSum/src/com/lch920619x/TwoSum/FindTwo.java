@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FindTwo {
 
-	public int[] find(int[] arr, int target) {
+	public int[] find(Integer[] arr, int target) {
 		
 		Map<Integer,Integer> map = new HashMap<Integer, Integer>();
 		for (int i=0; i< arr.length;i++) {
