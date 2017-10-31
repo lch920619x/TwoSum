@@ -7,20 +7,14 @@ import java.util.Map;
 
 public class FindTwo {
 
-	public int[] find(List<Integer> arr, int target) {
-		
+	public int[] find(Integer[] arr, int target) {
 		Map<Integer,Integer> map = new HashMap<Integer, Integer>();
-		for (int i=0; i< arr.size()-1;i++) {
-
-		/*	System.out.println(arr.size());
-			System.out.println("arr="+arr.get(i));
-			System.out.println("i="+i);
-			*/
-			if(map.containsKey(target-arr.get(i))) {
-				int[] index = {map.get(target-arr.get(i)), i};
+		for (int i=0; i< arr.length-1;i++) {
+			if(map.containsKey(target-arr[i])) {
+				int[] index = {map.get(target-arr[i]), i};
 				return index;
 			};
-			map.put(arr.get(i), i);
+			map.put(arr[i], i);
 			
 		}
 		
