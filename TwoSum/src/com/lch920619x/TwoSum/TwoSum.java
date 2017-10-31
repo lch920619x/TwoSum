@@ -8,7 +8,6 @@ public class TwoSum {
 
 	public static void main(String[] args) {
       List<Integer> arrList=  new ArrayList<Integer>();
-      Integer[] arr=  new Integer[10];
       Scanner sc = new Scanner(System.in);
       System.out.println("Your Array, end with empty line:");
       String input = new String();
@@ -17,16 +16,25 @@ public class TwoSum {
     	  if (input.equals("")) {
     		  break;
     	  }
-      arrList.add(Integer.parseInt(input));
+    	  try{arrList.add(Integer.parseInt(input));}
+    	  catch(Exception e){
+    		  break;
+    	  }
       }
       System.out.println("Your Target:");
       int target = sc.nextInt(); 
       FindTwo finder = new FindTwo();
-      int[] index = finder.find((Integer[])arrList.toArray(arr), target);
+
+      int[] index = finder.find(arrList, target);
+      if (index[0]==-1) {
+    	  System.out.println("not found!");
+      }
+      else {
       for (int i:index) {
       System.out.println(i);
       }
-
+      }
+      sc.close();
 	}
 
 }
