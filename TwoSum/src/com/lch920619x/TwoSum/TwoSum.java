@@ -2,6 +2,7 @@ package com.lch920619x.TwoSum;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class TwoSum {
@@ -36,5 +37,4 @@ public class TwoSum {
       }
       sc.close();
 	}
-
 }
