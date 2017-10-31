@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class TwoSum {
 
 	public static void main(String[] args) {
-		Integer[] arr = new Integer[0];
       List<Integer> arrList=  new ArrayList<Integer>();
       Scanner sc = new Scanner(System.in);
       System.out.println("Your Array, end with empty line:");
@@ -26,7 +25,7 @@ public class TwoSum {
       int target = sc.nextInt(); 
       FindTwo finder = new FindTwo();
 
-      int[] index = finder.find((Integer[])arrList.toArray(arr), target);
+      int[] index = finder.find((Integer[])arrList.toArray(new Integer[0]), target);
       if (index[0]==-1) {
     	  System.out.println("not found!");
       }
