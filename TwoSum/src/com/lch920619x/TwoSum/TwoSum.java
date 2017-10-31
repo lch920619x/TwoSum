@@ -10,11 +10,14 @@ public class TwoSum {
       List<Integer> arrList=  new ArrayList<Integer>();
       Integer[] arr=  new Integer[10];
       Scanner sc = new Scanner(System.in);
-      System.out.println("Your Array, end with -1:");
-      int input=sc.nextInt();
-      while (input!=-1) {
-    	  arrList.add(input);
-    	  input=sc.nextInt();
+      System.out.println("Your Array, end with empty line:");
+      String input = new String();
+      while (true) {
+    	  input = sc.nextLine();
+    	  if (input.equals("")) {
+    		  break;
+    	  }
+      arrList.add(Integer.parseInt(input));
       }
       System.out.println("Your Target:");
       int target = sc.nextInt(); 
