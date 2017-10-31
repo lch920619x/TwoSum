@@ -10,7 +10,7 @@ public class FindTwo {
 	public int[] find(List<Integer> arr, int target) {
 		
 		Map<Integer,Integer> map = new HashMap<Integer, Integer>();
-		for (int i=0; i< arr.size()-1;i++) {
+		for (int i=0; i< arr.size();i++) {
 
 		/*	System.out.println(arr.size());
 			System.out.println("arr="+arr.get(i));
